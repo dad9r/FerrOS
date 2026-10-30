@@ -1,0 +1,25 @@
+
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "FerrOS: Debug Pi 4",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/target/aarch64-unknown-none/debug/ferros",
+            "cwd": "${workspaceFolder}",
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb-multiarch",
+            "miDebuggerServerAddress": "localhost:1234",
+            "stopAtEntry": false,
+            "setupCommands": [
+                {
+                    "description": "Select ARM64 architecture",
+                    "text": "set architecture aarch64",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "FerrOS: Build"
+        }
+    ]
+}

@@ -31,7 +31,7 @@ fn uart_write(message: &str) {
 
 #[no_mangle]
 pub extern "C" fn kernel_main() -> ! {
-    uart_write("Coffee OS\n");
+    uart_write("FerrOS\n");
     uart_write("Bare-metal Rust is running!\n");
 
     loop {
