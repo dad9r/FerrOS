@@ -5,7 +5,7 @@ use core::arch::global_asm;
 use core::panic::PanicInfo;
 use core::ptr::{read_volatile, write_volatile};
 
-global_asm!(include_str!("../boot.S"));
+global_asm!(include_str!("../boot/boot.S"));
 
 const UART0_BASE: usize = 0xFE201000;
 const UART_DR: *mut u32 = UART0_BASE as *mut u32;
